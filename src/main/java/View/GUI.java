@@ -67,7 +67,7 @@ public class GUI {
                 try {
                         Allobjcontrl.admin.dataAdmin();
                         Allobjcontrl.admin.login(textkodeadminlogin.getText(), passwordlogin.getText());
-                        String nama = Allobjcontrl.admin.adminEntity().getNamaAdmin();
+                        String nama = Allobjcontrl.admin.adminEntity().getNama();
                         JOptionPane.showMessageDialog(null, "selamat datang " + nama, "information", JOptionPane.INFORMATION_MESSAGE);
                         BukuGUI bugui = new BukuGUI();
                         LogReg.dispose();

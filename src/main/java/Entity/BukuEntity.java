@@ -4,18 +4,19 @@
  */
 package Entity;
 
-public class BukuEntity extends KodeAbstractEntity{
+public class BukuEntity {
    
+    private String kode;
     private String judul;
     private String penerbit;
     
     public BukuEntity(String kode, String judul, String penerbit) {
-        super(kode);
+        this.kode = kode;
         this.judul = judul;
         this.penerbit = penerbit;
     }
 
-    @Override
+   
     public String getKode() {
         return kode;
     }
