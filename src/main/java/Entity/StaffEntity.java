@@ -8,10 +8,10 @@ package Entity;
  *
  * @author faktul diki cahyono
  */
-public class AdminEntity extends PegawaiAbstractEntity{
+public class StaffEntity extends PegawaiAbstractEntity{
     
 
-    public AdminEntity(String kode, String password, String nama) {
+    public StaffEntity(String kode, String password, String nama) {
         super(kode, password, nama);
     }
     

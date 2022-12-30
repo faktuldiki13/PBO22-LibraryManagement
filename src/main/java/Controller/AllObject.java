@@ -4,7 +4,7 @@
  */
 package Controller;
 
-import Model.AdminModel;
+import Model.StaffModel;
 import Model.BukuModel;
 
 
@@ -15,7 +15,7 @@ import Model.BukuModel;
  */
 public class AllObject {
     
-    public static AdminModel adminmodel = new AdminModel();
+    public static StaffModel adminmodel = new StaffModel();
     public static BukuModel bukumodel = new BukuModel();
 
 }

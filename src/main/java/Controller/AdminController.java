@@ -4,7 +4,7 @@
  */
 package Controller;
 
-import Entity.AdminEntity;
+import Entity.StaffEntity;
 
 public class AdminController implements Incontroller{
     int indexLogin = 0;
@@ -18,7 +18,7 @@ public class AdminController implements Incontroller{
         String passwordAdmin[] = {"01", "02"};
         String namaAdmin[] = {"Jecky", "Sincan"};
         for(int i = 0; i < kodeStaff.length; i++) {
-            AllObject.adminmodel.insertAdmin(new AdminEntity(kodeStaff[i], passwordAdmin[i], namaAdmin[i]));
+            AllObject.adminmodel.insertAdmin(new StaffEntity(kodeStaff[i], passwordAdmin[i], namaAdmin[i]));
         }
     }
     
@@ -26,7 +26,7 @@ public class AdminController implements Incontroller{
         indexLogin = AllObject.adminmodel.cekData(kodeStaff, passwordAdmin);
     }
 
-    public AdminEntity adminEntity() {
+    public StaffEntity adminEntity() {
         return AllObject.adminmodel.showDataAdmin(indexLogin);
     }
 

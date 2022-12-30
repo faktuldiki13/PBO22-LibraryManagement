@@ -4,24 +4,24 @@
  */
 package Model;
 
-import Entity.AdminEntity;
+import Entity.StaffEntity;
 import java.util.ArrayList;
 
-public class AdminModel implements Inmodel{
-    public ArrayList<AdminEntity> adminEntityArrayList;
+public class StaffModel implements Inmodel{
+    public ArrayList<StaffEntity> adminEntityArrayList;
     
-    public AdminModel() {
-        adminEntityArrayList = new ArrayList<AdminEntity>();
+    public StaffModel() {
+        adminEntityArrayList = new ArrayList<StaffEntity>();
     }
     
-    public void insertAdmin(AdminEntity admin) {
+    public void insertAdmin(StaffEntity admin) {
         adminEntityArrayList.add(admin);
     }
     
     @Override
     public void tampildaftar() {
         
-        for (AdminEntity admin : adminEntityArrayList) {
+        for (StaffEntity admin : adminEntityArrayList) {
             System.out.println("========================================");
             System.out.println("Nama : " + admin.getNama());
             System.out.println("Kode Admin : " + admin.getKode());
@@ -31,7 +31,7 @@ public class AdminModel implements Inmodel{
     
     public int cekData(String kode, String passwordAdmin) {
         int loop = 0;
-        for (AdminEntity adminentity : adminEntityArrayList) {
+        for (StaffEntity adminentity : adminEntityArrayList) {
             if (adminentity.getKode().equals(kode) && adminentity.getPassword().equals(passwordAdmin)) {
                 break;
             } else {
@@ -41,7 +41,7 @@ public class AdminModel implements Inmodel{
         return loop;
     }
     
-    public AdminEntity showDataAdmin(int index) {
+    public StaffEntity showDataAdmin(int index) {
         return adminEntityArrayList.get(index);
     }
 }
